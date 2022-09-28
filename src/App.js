@@ -1,23 +1,16 @@
-import './App.css';
 import bootstrap from 'bootstrap'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Profile from "./profile/Profile"
-import InputForm from './InputForm';
-import Formulaire from './Formulaire';
 
-const data = [
-  { label: "FullName", type: "text" },
-  { label: "Bio", type: "text" },
-  { label: "Profession", type: "text" },
-  { label: "url", type: "url" },
-  { label: "document", type: "file" }
-]
+
 
 function App(props) {
+
   return (
     <>
-    {data.map(objet => (<InputForm {...objet}/>))}
-
+    <Profile fullName="nom complet" bio="biographie" profession="profession" >
+      <img src='./images/lac.jpg' alt='Image'/>
+    </Profile>
     </>
   )
 }
