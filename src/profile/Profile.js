@@ -1,19 +1,21 @@
 import bootstrap from 'bootstrap';
 import Button from 'bootstrap';
 
-export default function Profile(props) {
-    const handleName = (e) => {
-        return (
-            alert(`this is an alert with ${e}`)
-        )
-    }
+
+    export default function Profile(props) {
+console.log(props);
+const Fonction = (e) => props.handleFunction(e);
     return (
         <>
             {props.children}
-            <button type="submit">Submit</button>
-            {handleName(props.fullName)}
+            <button onClick={Fonction(props.fullName)}>Submit</button>
         </>
     );
+}
+Profile.defaultProps = {
+    fullName:"default name",
+    bio:"default biographie" ,
+    profession:" defaultprofession" 
 }
 
 // The profile component gets data (fullName, bio, profession) as props, and gets image as children props, 

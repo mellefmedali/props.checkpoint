@@ -4,11 +4,11 @@ import Profile from "./profile/Profile"
 
 
 
-function App(props) {
-
+function App() {
+  const handleName = (e) =>alert(`this is an alert with ${e}`)
   return (
     <>
-    <Profile fullName="nom complet" bio="biographie" profession="profession" >
+    <Profile fullName="Youssef" bio="biographie" profession="Nice Job" handleFunction={handleName}>
       <img src='./images/lac.jpg' alt='Image'/>
     </Profile>
     </>
