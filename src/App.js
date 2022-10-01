@@ -1,19 +1,26 @@
 import bootstrap from 'bootstrap'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Profile from "./profile/Profile"
+// import PropTypes from "prop-types";
 
 
+// Profile.propTypes = {
+//   fullName : PropTypes.string,
+//   bio : PropTypes.string,
+//   profession : PropTypes.string,
+// }
 
 function App() {
   const handleName = (e) =>alert(`this is an alert with ${e}`)
   return (
     <>
-    <Profile fullName="Youssef" bio="biographie" profession="Nice Job" handleFunction={handleName}>
+    <Profile fullName="Youssef" bio="1" profession="Nice Job" handleFunction={handleName}>
       <img src='./images/lac.jpg' alt='Image'/>
     </Profile>
     </>
   )
 }
+
 
 export default App;
 
